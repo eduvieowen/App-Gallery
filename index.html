@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/output.css">
+    <title>APPS</title>
+</head>
+<body class="font-main">
+    
+    <!-- title/nav -->
+    <div class="flex items-center pt-3 pl-3 pb-2 border-b-2 border-black bg-sky-300">
+        <h1 class="">A BUNCH OF APPS</h1>
+    </div>
+
+    <!-- app gallery -->
+    <main class="m-10 grid lg:grid-cols-3 sm:grid-cols-2 gap-8">
+        
+        <!-- COUNTER APP -->
+        <article class="col-span-1 font-body">
+            <p id="welcome-el" class="text-black"></p>
+
+            <!-- main container -->
+            <div class="border-2 border-black">
+
+                <!-- title -->
+                <div class="font-main text-2xl text-center text-white p-3 bg-gray-600">
+                    PEOPLE COUNTER
+                </div>
+
+                <!-- counter content -->
+                <div class="bg-orange-200">
+                    <div class="p-3 text-center">
+                        PEOPLE ENTERED:
+                    </div>
+
+                    <!-- counter -->
+                    <div id="count-el" class="flex justify-center m-2 pt-1 pb-1 pl-3 pr-3 border-2 border-dashed border-black">
+                        0
+                    </div><br>
+                    <!-- logger -->
+                    <h3 class="text-center">Previous Entries: </h3>
+                    
+                    <div id="log" class="flex justify-center text-center m-2 pt-1 pb-1 pl-3 pr-3 border-2 border-dotted border-red-700">
+                        
+                    </div>
+
+                    <!-- buttons -->
+                    <div class="mt-5 p-3 border-t-2 border-b-2 border-black">
+                        <div class=" flex justify-evenly">
+                            
+                            <button class="hover:scale-125" id = "increment-btn" onclick = "increment()">
+                                <p class="text-lg">ADD</p>
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg> -->
+                            </button>
+
+                            <button class="hover:scale-125 text-lg" id = "save-btn" onclick = "save()">
+                                SAVE
+                            </button>
+                            
+                            <!-- <button class="hover:scale-110" id = "decrement-btn" onclick = "decrement()">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </button> -->
+
+                        </div>
+                       
+                    </div> 
+                    <h3 class="hover:scale-110 text-xs text-center p-2 cursor-pointer" id = "reset-btn" onclick = "reset()">
+                        RESET ENTRIES
+                    </h3>
+                    <!-- buttons end -->
+                    <script src="./index.js"></script>                    
+                </div>
+                
+            </div>    
+
+        </article>
+
+        <!-- Error APP -->
+        <article class="col-span-1 font-body">
+            <p id="welcome-el" class="text-black"></p>
+
+            <!-- main container -->
+            <div class="border-2 border-black bg-emerald-600">
+
+                <!-- title -->
+                <div class="font-main text-2xl text-center text-white p-3 bg-gray-600">
+                    ERROR BUTTON
+                </div>
+                
+                <!-- contents -->
+                <div class="">
+                    <!-- main image | main title -->
+                    <div class="grid grid-cols-3 justify-center m-10">
+
+                        <div class="col-span-2">
+                            <img src="./media/counter-bg.jpg" alt="image of thing" class="w-36 md:w-56 rounded-2xl border-4 border-slate-800">
+                        </div>
+
+                        <div class="col-span-1 m-3 flex items-center text-white">
+                            <p>Chronos, Agenda & Pen</p>
+                        </div>
+
+                        <div class="col-span-3 text-left mt-5">
+                            <button id="error-el" class="text-sm border-2 pt-1 pb-1 pl-2 pr-2 bg-white border-black rounded-2xl hover:scale-110 shadow-sm shadow-black hover:shadow-md hover:shadow-black" onclick="error()">
+                                Purchase - $30
+                            </button>
+                            <p id="error-par" class="text-red-700"></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- Calculator APP -->
+        <article class="col-span-1 font-body">
+            <p id="welcome-el" class="text-black"></p>
+
+            <!-- main container -->
+            <div class="border-2 border-black bg-emerald-600">
+
+                <!-- title -->
+                <div class="font-main text-2xl text-center text-white p-3 bg-gray-600">
+                    CA1C^1AT0R
+                </div>
+
+                <!-- content -->
+                <div class="text-center">
+
+                    <div>
+                        <span id="num1">
+                            num1
+                        </span>
+                        <span id="num2">
+                            num2
+                        </span>
+                        <span id="num3">
+                            num3
+                        </span>
+                    </div>
+                    
+                    <div>
+                        <button id="add-btn" onclick="add()">
+                            ADD
+                        </button>
+                        <button id="sub-btn" onclick="sub()">
+                            SUB
+                        </button>
+                        <button id="mul-btn" onclick="mul()">
+                            MUL
+                        </button>
+                        <button id="div-btn" onclick="div()">
+                            DIV
+                        </button>
+                    </div>
+
+                </div>
+
+                <footer>Powered by Ed</footer>
+    </main>
+</body>
+</html>
