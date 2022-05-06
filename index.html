@@ -73,8 +73,7 @@
                     <h3 class="hover:scale-110 text-xs text-center p-2 cursor-pointer" id = "reset-btn" onclick = "reset()">
                         RESET ENTRIES
                     </h3>
-                    <!-- buttons end -->
-                    <script src="./index.js"></script>                    
+                    <!-- buttons end -->                  
                 </div>
                 
             </div>    
@@ -126,46 +125,132 @@
             <p id="welcome-el" class="text-black"></p>
 
             <!-- main container -->
-            <div class="border-2 border-black bg-emerald-600">
+            <div class="border-2 border-black">
 
                 <!-- title -->
                 <div class="font-main text-2xl text-center text-white p-3 bg-gray-600">
-                    CA1C^1AT0R
+                    CALCULATOR
                 </div>
 
                 <!-- content -->
-                <div class="text-center">
+                <div class="py-4 text-center bg-indigo-400">
 
-                    <div>
+                    <div class="">
                         <span id="num1">
-                            num1
+                            0
                         </span>
                         <span id="num2">
-                            num2
+                            0
+                        </span>
+                        <span>
+                            =
                         </span>
                         <span id="num3">
-                            num3
+                            0
                         </span>
                     </div>
                     
-                    <div>
-                        <button id="add-btn" onclick="add()">
+                    <div class="my-4">
+                        <button id="add-btn" class="calc-btn" onclick="add()">
                             ADD
                         </button>
-                        <button id="sub-btn" onclick="sub()">
+                        <button id="sub-btn" class="calc-btn" onclick="sub()">
                             SUB
                         </button>
-                        <button id="mul-btn" onclick="mul()">
+                        <button id="mul-btn" class="calc-btn" onclick="mul()">
                             MUL
                         </button>
-                        <button id="div-btn" onclick="div()">
+                        <button id="div-btn" class="calc-btn" onclick="div()">
                             DIV
                         </button>
                     </div>
+                    
+                    <button id="reset-btn" class="border-2 p-1 bg-red-700 text-white" onclick="res()">
+                        RESET
+                    </button>
 
                 </div>
+                <!-- end content -->
+                <div class="bg-white">
+                    <footer>Powered by Ed</footer>
+                </div>
 
-                <footer>Powered by Ed</footer>
+            </div>
+            
+        </article>
+        
+        <!-- Calculator APP -->
+        <article class="col-span-1 font-body">
+            <p id="welcome-el" class="text-black"></p>
+
+            <!-- main container -->
+            <div class="border-2 border-black">
+
+                <!-- title -->
+                <div class="font-main text-2xl text-center text-white p-3 bg-gray-600">
+                    BLACKJACK
+                </div>
+
+                <!-- content -->
+                <div class="py-4 text-center bg-">
+                    
+                    <div >
+                        <button id="startButton" class="bg-green-600 text-white border-black border-2 px-1" onclick="renderGame()">
+                            START GAME
+                        </button>
+                    </div>
+                    
+                    <div id="gameContainer" class="hidden">
+
+                        <br>
+                        <div class="text-black">
+                            <div id="firstCard">
+                                <span>
+                                    First Card: 
+                                </span>
+                            </div>
+                            <br>
+                            <div id="secondCard">
+                                <span>
+                                    Second Card: 
+                                </span>
+                            </div>
+                            <br>
+                            <button id="newCard" class="hidden" onclick="newCard()">
+                                New Card: 
+                            </button>
+                        </div>
+                        <br>
+                        <div id="sum" >                        
+                            <button onclick="sum()">
+                                Click for Sum: <span id="sumContent"></span>
+                            </button>
+                        </div>
+                        <br>
+                        <div id="result" >                        
+                            <button onclick="result()">
+                                Result...
+                            </button>
+                            <p id="resultMessage" class="hidden"></p>
+                        </div>
+                        <br>
+                        <div id="options" class="hidden">
+                            <button id="yesOption" class="border-2 border-black px-1" onclick="yesFunction()">
+                                yes
+                            </button>
+                            <button class="border-2 border-black px-1">
+                                no
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        
+        </article>
+    
     </main>
+    <script src="./index.js"></script>  
 </body>
 </html>

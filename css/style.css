@@ -4,3 +4,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.calc-btn {
+   @apply border-2 p-1 bg-fuchsia-400 rounded-lg;
+}
