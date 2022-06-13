@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="./css/output.css"/>
     <title>APPS</title>
 </head>
 <body class="font-main">
@@ -81,7 +81,7 @@
         </article>
 
         <!-- Error APP -->
-        <article class="col-span-1 font-body">
+        <article class="col-span-2 font-body">
             <p id="welcome-el" class="text-black"></p>
 
             <!-- main container -->
@@ -179,8 +179,8 @@
             
         </article>
         
-        <!-- Calculator APP -->
-        <article class="col-span-1 font-body">
+        <!-- Black Jack APP -->
+        <article class="col-span-2 font-body">
             <p id="welcome-el" class="text-black"></p>
 
             <!-- main container -->
@@ -198,6 +198,11 @@
                         <button id="startButton" class="bg-green-600 text-white border-black border-2 px-1" onclick="renderGame()">
                             START GAME
                         </button>
+                    </div> 
+                    <div >
+                        <button id="restartButton" class="bg-red-600 text-white border-black border-2 px-1 hidden" onclick="restartGame()">
+                            RESTART GAME
+                        </button>
                     </div>
                     
                     <div id="gameContainer" class="hidden">
@@ -205,43 +210,62 @@
                         <br>
                         <div class="text-black">
                             <div id="firstCard">
-                                <span>
-                                    First Card: 
-                                </span>
+                                First Card: 
+                                <span id="cOne"></span>
                             </div>
                             <br>
                             <div id="secondCard">
-                                <span>
-                                    Second Card: 
-                                </span>
+                                Second Card: 
+                                <span id="cTwo"></span>
                             </div>
                             <br>
                             <button id="newCard" class="hidden" onclick="newCard()">
                                 New Card: 
                             </button>
                         </div>
-                        <br>
+
                         <div id="sum" >                        
                             <button onclick="sum()">
                                 Click for Sum: <span id="sumContent"></span>
                             </button>
                         </div>
                         <br>
-                        <div id="result" >                        
+                        
+                        <div>  
+
                             <button onclick="result()">
                                 Result...
                             </button>
-                            <p id="resultMessage" class="hidden"></p>
+
                         </div>
-                        <br>
-                        <div id="options" class="hidden">
-                            <button id="yesOption" class="border-2 border-black px-1" onclick="yesFunction()">
-                                yes
-                            </button>
-                            <button class="border-2 border-black px-1">
-                                no
-                            </button>
+
+                        <div  id="result" class="hidden">
+
+                            <p id="resultMessage" class=""></p>
+                            
+                            <div id="options" class="">
+
+                                <button class="border-2 border-black px-1" onclick="yesFunction()">
+                                    yes
+                                </button>
+                                <button class="border-2 border-black px-1" onclick="noFunction()">
+                                    no
+                                </button>
+
+                            </div>
+                            <div id="optionsTwo" class="hidden">
+
+                                <button class="border-2 border-green-500 px-1" onclick="yesFunctionTwo()">
+                                    yes
+                                </button>
+                                <button class="border-2 border-black px-1" onclick="noFunctionTwo()">
+                                    no
+                                </button>
+
+                            </div>
+                            
                         </div>
+                        <!-- <br> -->
                         
                     </div>
                 </div>
@@ -249,7 +273,71 @@
             </div>
         
         </article>
-    
+        
+        <!-- RSP APP -->
+        <article class="col-span-1 font-body">
+            <p id="welcome-el" class="text-black"></p>
+
+            <!-- main container -->
+            <div class="border-2 border-black">
+
+                <!-- title -->
+                <div class="font-main text-2xl text-center text-white p-3 bg-gray-600">
+                    ROCK-PAPER-SCISSORS
+                </div>
+
+                <!-- content -->
+                <div class="py-4">
+                    <h2>comp: <span id="computer-choice"></span></h2>
+                    <h2>user: <span id="user-choice"></span></h2>
+                    <h2>result: <span id="rsp-result"></span></h2>
+
+                    <button class="rpsButton" id="rock">rock</button>
+                    <button class="rpsButton" id="paper">paper</button>
+                    <button class="rpsButton" id="scissors">scissors</button>
+
+                </div>
+
+            </div>
+            
+        </article>
+        
+        <!-- MEM APP -->
+        <article class="col-span-3 lg:col-span-2 font-body">
+            <p id="welcome-el" class="text-black"></p>
+
+            <!-- main container -->
+            <div class="border-2 border-black">
+
+                <!-- title -->
+                <div class="font-main text-2xl text-center text-white p-3 bg-gray-600">
+                    MEMORY GAME
+                </div>
+
+                <!-- content -->
+                <div class="p-4">
+                    <h3 id="score">Score: <span id="mem-score"></span></h3>
+                    
+                    <!-- Card Container -->
+                    <div class="flex justify-center mt-5">
+
+                        <div id="grid" class="grid grid-cols-4">
+                            <!-- Data From JS File "app.js" -->
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </article>
+        <script src="/scripts/pc.js"></script>          
+        <script src="/scripts/err.js"></script>
+        <script src="/scripts/clc.js"></script>
+        <script src="/scripts/bj.js"></script>
+        <script src="/scripts/rps.js"></script>
+        <script src="/scripts/mem.js"></script>
+        <script src="/scripts/array.js"></script>
+
     </main>
     <script src="./index.js"></script>  
 </body>

@@ -12,7 +12,7 @@ module.exports = {
       },
 
       backgroundImage: {
-        counter: "url('/media/counter-bg.jpg')",
+        'brown-square': "url('/media/brown-square.png')",
       }
     },
   },
